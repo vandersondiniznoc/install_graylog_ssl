@@ -38,3 +38,46 @@ Este projeto fornece um script shell automatizado para instalar e configurar o *
 ```bash
 git clone https://github.com/vandersondiniznoc/graylog-debian12-ssl.git
 cd graylog-debian12-ssl
+```
+
+- Edite o script e configure os dados no topo:
+nano install_graylog_ssl.sh
+
+Altere:
+DOMAIN="graylog.seudominio.com.br"
+EMAIL="seu@email.com"
+ADMIN_PASS="admin123"
+
+- Dê permissão e execute o script:
+chmod +x install_graylog_ssl.sh
+sudo ./install_graylog_ssl.sh
+
+🌐 Acesso
+Após a instalação, acesse via navegador:
+- https://graylog.seudominio.com.br
+- Usuário: admin
+- Senha: definida na variável ADMIN_PASS
+
+🛡️ Pós-instalação
+- Altere a senha padrão imediatamente.
+- Configure seus roteadores/firewalls para enviar logs via Syslog, GELF, etc.
+- Acompanhe os logs em tempo real e crie Dashboards!
+
+📚 Referências
+- Documentação oficial Graylog
+- OpenSearch
+- MongoDB
+- Certbot
+
+
+## 🧑‍💻 Autor
+**Vanderson Diniz do Nascimento**  
+Especialista em Linux, Redes, Cibersegurança e ISPs  
+
+- 🌐 [Site pessoal](https://vandersondiniz.com.br)  
+- 🏢 [ISPLAB](https://isplab.com.br)  
+- 💼 [LinkedIn](https://www.linkedin.com/in/vdnascdiniz/)  
+- 💻 [GitHub @vandersondiniznoc](https://github.com/vandersondiniznoc)
+
+📄 Licença
+Este projeto está licenciado sob a MIT License.
